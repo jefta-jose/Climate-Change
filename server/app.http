@@ -1,0 +1,102 @@
+### health test
+GET http://localhost:9500/health
+
+#############################################################################
+### registering a user
+POST http://localhost:9500/api/register/user
+Content-Type: application/json
+
+{
+    "FirstName": "Jeff",
+    "LastName": "Ndegwa",
+    "Email": "ndegwajeff41erGTY03ght@gmail.com",
+    "Password": "pass404",
+    "NationalID": "12345678",
+    "County": "Nyeri",
+    "Residence": "Skuta",
+    "PhoneNumber": "0712345678",
+    "Occupation": "farmer",
+    "Gender": "Male",
+    "DateOfBirth": "3/31/2000",
+    "PhotoURL": "example.photo.url"
+}
+
+### login user 
+POST http://localhost:9500/api/login/user
+Content-Type: application/json
+
+{
+    "Email": "ndegwajeff41erGTY03ght@gmail.com",
+    "Password": "pass404"
+}
+
+### get a user by its id
+GET http://localhost:9500/api/user/1
+
+### get all users
+GET http://localhost:9500/api/users
+
+### update user details
+PUT http://localhost:9500/api/user/update/1
+Content-Type: application/json
+
+{
+    "County": "Kisumu"
+}
+
+### delete a user
+DELETE http://localhost:9500/api/user/delete/1
+
+#############################################################################
+### create a blog
+POST http://localhost:9500/api/createblog
+Content-Type: application/json
+
+{
+    "BlogImage": "Kamuyu",
+    "BlogTitle": "Domestic Violence",
+    "BlogSubject": "I think my neighbour is going to kill his wife",
+    "BlogContent": "high"
+}
+
+### get all blogs
+GET http://localhost:9500/api/blogs
+
+### get one blog
+GET http://localhost:9500/api/oneblog/2
+
+### updating a blog
+PUT http://localhost:9500/api/updateblog/2
+Content-Type: application/json
+
+{
+    "BlogImage": "image.example.url"
+}
+
+### delete a blog
+DELETE http://localhost:9500/api/deleteblog/1
+
+#############################################################################
+### create a initiative
+POST http://localhost:9500/api/createinitiative
+Content-Type: application/json
+
+{
+    "Title": "Tree Planting tommorow",
+    "Tag": "future generations"
+}
+
+### get all initiatives
+GET http://localhost:9500/api/initiatives
+
+
+### update a initiative
+PUT http://localhost:9500/api/updateinitiative/1
+Content-Type: application/json
+
+{
+    "Title": "Updating feedback 1"
+}
+
+### delete a feedback
+DELETE http://localhost:9500/api/deleteinitiative/1
